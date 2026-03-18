@@ -14,7 +14,7 @@ function send(){
     displayMessage(userInput, "user");
 
     // Clear the input
-    document.getElementById("userInput").value = "";
+    document.getElementById("msg").value = "";
 }
 
 // display the message on monitor
@@ -25,6 +25,7 @@ function displayMessage(message, sender, isHTML = false){
         message = message();
     }
     messageContainer.appendChild(messageElement);
+    messageElement.textContent = message;
 }
 
 const socket = io();
@@ -50,7 +51,7 @@ socket.on("deleteMessage", (msg)=>{
 });
 */
 // listening the input keypress things
-document.getElementById("userInput").addEventListener("keydown", function(e){
+document.getElementById("msg").addEventListener("keydown", function(e){
     if(e.key === "enter"){
         sendMessage();
     }
