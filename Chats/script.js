@@ -52,7 +52,7 @@ socket.on("deleteMessage", (msg)=>{
 */
 // listening the input keypress things
 document.getElementById("msg").addEventListener("keydown", function(e){
-    if(e.key === "enter"){
+    if(e.key === "Enter"){
         sendMessage();
     }
 })
