@@ -49,7 +49,7 @@ function displayMessage(message, sender, isHTML = false){
     messageElement.textContent = message;
 }
 
-const socket = io();
+// const socket = io();
 /*
 // send funtion
 function send(){
