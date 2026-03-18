@@ -6,8 +6,29 @@ document.addEventListener("contextmenu", function(e){
 })
 
 // function about sent the message
-function send(){
+async function send(){
     const userInput = document.getElementById("msg").value.trim();
+    const burnEnabled = document.getElementById("burnEnabled").checked;
+    const burnTime = Number(document.getElementById("burnTime").value);
+
+    if(!content) return;
+    await fetch("/api/messages", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            "Authorization": `Bearer ${token}`
+        },
+        body: JSON.stringify({
+            conversationId: currentConversationId,
+            content,
+            burnMode: burnEnabled,
+            burnAfterSecond: burnEnabled ? burnTime : null
+        })
+    });
+    
+
+    document.getElementById("msg").value = "";
+
     if(userInput === "") return;
 
     // display the user message
@@ -50,6 +71,20 @@ socket.on("deleteMessage", (msg)=>{
     if(el) el.remove();
 });
 */
+
+// burn the message
+function startBurnCountDown(messageId, burnAt){
+    const timer = setInterval(() => {
+        const remain = Math.max(0, Math.floor((new Date(burnAt) - Date.now()) / 1000));
+        const el = document.querySelector(`[data-message-id="${messageId}"] .burn-timer`);
+        if(el) el.textContent = remain + "s";
+
+        if(remain <= 0){
+            clearInterval(timer);
+        }
+    }, 1000);
+}
+
 // listening the input keypress things
 document.getElementById("msg").addEventListener("keydown", function(e){
     if(e.key === "Enter"){

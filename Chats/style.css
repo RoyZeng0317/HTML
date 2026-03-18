@@ -13,6 +13,11 @@ body{
     justify-content: center;
     align-items: center;
     height: 100vh;
+    color: var(--w);
+}
+
+span{
+    font-size: 25px;
 }
 .chat-container{
     width: 400px;
