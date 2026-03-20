@@ -1,0 +1,6 @@
+*{
+	--b: #000;
+}
+body{
+background: var(--b);
+}
