@@ -1,6 +1,10 @@
 *{
 	--b: #000;
+	--w: #fff;
 }
 body{
 background: var(--b);
+}
+link{
+	color: var(--w);
 }
