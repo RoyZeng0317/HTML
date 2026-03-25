@@ -132,7 +132,9 @@ ul {
     text-align: center;
     font-size: 18px;    
 }
-
+.chatbot{
+    color: #fff;
+}
 /* 頁尾 */
 footer {
     background-color: #1d1d1d;
