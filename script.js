@@ -1,13 +1,44 @@
 // define default response
 const response = {
- "": "我是機器人，有什麼我可以幫助你的?",
- "請問我想要找有關計算機的網站": "以下是有關計算機的網站",
+ "": "I'm robot, May I help you?",
+ "": "",
  "": ""
 };
-function send(){
- let input = document.getElementById("");
+// keyword table
+const keyword = [
+    {
+        keywords: ["Hello", "Hi", "hello", "hi"],
+        reply: "Hello, I'm robot. Nice to meet you."
+    },
+    {
+        keywords: ["Calculator"],
+        reply: "There is about the calculator of the website."
+    },
+    {
+        keywords: [""],
+        reply: ""
+    }
+]
+// send the message
+function send(msg){
+    let input = document.getElementById("");
+    msg = msg.toLowerCase();
 
+    for(let rule of rules){
+        for(let key of rule.keywords){
+            if(msg.includes(key)){
+                return rule.reply;
+            }
+        }
+    }
+    return "Soory, I can't understand your meaning.";
 }
-// chatbot response
-if(enter include =""){
+
+document.getElementById("msg").addEventListener("keydown", function(e){
+    if(e.key === "Enter"){
+        sendMessage();
+    }
+})
+function openChat(){
+
 }
