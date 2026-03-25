@@ -68,12 +68,13 @@
                     </ul>
                 </div>
             </div>
+            <div class="menu-item">
             <div class="chatbot">
-                <div class="menu-item">
-                    <a href="#" class="chatbot"><i class="fa-brands fa-bots"></i></a>
-                    <ul>
-                        <input type="text" placeholder="Enter your message...">
-                    </ul>
+                    <a href="#" class="chatbot" onclick="openChat()"><i class="fa-brands fa-bots"></i></a>
+                    <div class="input-area">
+                        <input class="message" id="msg" type="text" placeholder="Enter your message...">
+                        <button onclick="send()"><i class="fa-solid fa-paper-plane"></i></button>
+                    </div>
                 </div>
             </div>
         <div class="test">
