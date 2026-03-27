@@ -1,8 +1,11 @@
 // define default response
 const response = {
- "": "I'm robot, May I help you?",
- "": "",
- "": ""
+    "": "I'm robot, May I help you?",
+    "I want to find about the calculator of website.": "This is about the calcutlator of the website.",
+    "": "",
+    "": "我是機器人，有什麼我可以幫助你的?",
+    "請問我想要找有關計算機的網站": "以下是有關計算機的網站",
+    "": ""
 };
 // keyword table
 const keyword = [
@@ -26,15 +29,21 @@ function send(){
 
     if(msg === "") return;
 
-    addMessage("You: " +msg);
+    addMessage("You: " + msg);
 
-    let reply = response(msg);
+    let reply = botReply(msg);
     addMessage("Boot: " + reply);
 
     input.value = "";
-    // msg = msg.toLowerCase();
-
-    for(let rule of rules){
+}
+// bot reply
+function botReply(msg){
+    msg = msg.toLowerCase();
+    if(!Array.isArray(keyword)){
+        console.error("rules is not an array!");
+        return "system error";
+    }
+    for(let rule of keyword){
         for(let key of rule.keywords){
             if(msg.includes(key)){
                 return rule.reply;
@@ -50,11 +59,13 @@ function addMessage(text){
     log.scrollTop = log.scrollHeight;
 }
 // key reply
-
-document.getElementById("msg").addEventListener("keydown", function(e){
-    if(e.key === "Enter"){
-        sendMessage();
-    }
+document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById("msg").addEventListener("keydown", function(e){
+        if(e.key === "Enter"){
+            e.preventDefault();
+            send();
+        }
+    })
 })
 // open the chat
 function openChat(){
@@ -63,4 +74,6 @@ function openChat(){
 // close the chat
 function closeChat(){
     document.getElementById("chatWindow").style.display = "none";
+    let log = document.getElementById("chat-log");
+    log.innerHTML = "";
 }
