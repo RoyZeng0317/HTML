@@ -3,8 +3,8 @@
 	--w: #fff;
 }
 body{
-background: var(--b);
+	background: var(--b);
 }
-link{
+.link{
 	color: var(--w);
 }
