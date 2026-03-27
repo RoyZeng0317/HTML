@@ -1,7 +1,7 @@
 // define default response
 const response = {
     "": "I'm robot, May I help you?",
-    "I want to find about the calculator of website.": "This is about the calcutlator of the website.",
+    "I want to find about the calculator of website.": 'This is about the calcutlator of the website.<br><a class="link" href="https://royzeng0317.github.io/HTML/Calculator/us-en/index.html">Calculator Website',
     "": "",
     "": "我是機器人，有什麼我可以幫助你的?",
     "請問我想要找有關計算機的網站": "以下是有關計算機的網站",
@@ -14,12 +14,15 @@ const keyword = [
         reply: "Hello, I'm robot. Nice to meet you."
     },
     {
-        keywords: ["Calculator"],
-        reply: "There is about the calculator of the website."
+        keywords: ["Calculator", "calculator"],
+        reply: 'There is about the calculator of the website.<br><a class="link" href="https://royzeng0317.github.io/HTML/Calculator/us-en/index.html">Calculator Website'
     },
     {
-        keywords: [""],
-        reply: ""
+        keywords: ["name", "Name"],
+        reply: "My name is Kuki. If you have any problem can find me to hlep you."
+    },
+    {
+        keywords: [""]
     }
 ]
 // send the message
