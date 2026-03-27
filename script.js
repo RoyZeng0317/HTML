@@ -5,7 +5,7 @@ const response = {
     "": "",
     "": "我是機器人，有什麼我可以幫助你的?",
     "請問我想要找有關計算機的網站": "以下是有關計算機的網站",
-    "": "Sorry, I can't understand your meaning."
+    default: "Sorry, I can't understand your meaning."
 };
 // keyword table
 const keyword = [
