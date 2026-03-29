@@ -5,54 +5,57 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="../style.css">
-        <title>HTML網站首頁</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://royzeng0317.github.io/HTML/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+        <title>HTML Website Home</title>
     </head>
     <body>
         <nav>
-            <header id="header"> HTML 網站首頁</header>            
+            <header id="header"> HTML Website Home</header>            
             <ul>
-                <li><a href="index.html" class="Home" id="home">首頁</a></li>
+                <li><a href="index.html" class="Home" id="home">Home</a></li>
             </ul>        
         </nav>
         <div class="menu-wrapper">
             <div class="menu-item">
-                <span class="menu-label" id="clock">時鐘</span>
+                <span class="menu-label" id="clock">Clock</span>
                 <ul class="dropdown" id="clock-menu">
-                    <li><a href="../Clock/index.html" class="link" id="Digital-Clock">電子鐘</a></li>
-                    <li><a href="../The-Unified-Entrance-Exam-Countdown-Clock/index.html" class="link">統測倒計時</a></li>
-                    <li><a href="../General-School-Ability-Test-Countdown-Clock/index.html" class="link">學測倒計時</a></li>
+                    <li><a href="../Clock/index.html" class="link" id="Digital-Clock">Digital Clock</a></li>
+                    <li><a href="../The-Unified-Entrance-Exam-Countdown-Clock/index.html" class="link">Unified Entrance Exam Countdown Clock</a></li>
+                    <li><a href="../General-School-Ability-Test-Countdown-Clock/index.html" class="link">General School Ability Test Countdown Clock</a></li>
                 </ul>
             </div>
             <div class="menu-item">
-                <span class="menu-label" id="calculator">計算機</span>
+                <span class="menu-label" id="calculator">Calculator</span>
                 <ul class="dropdown" id="calculator-menu">
-                    <li><a href="../Calculator/index.html" class="link">計算機</a></li>
+                    <li><a href="../Calculator/us-en/index.html" class="link">Calculator</a></li>
                 </ul>
             </div>
             <div class="menu-item">
-                <span class="menu-label" id="photo">照片</span>
+                <span class="menu-label" id="photo">Photo</span>
                 <ul class="dropdown" id="photo-menu">
-                    <li><a href="../Picture Auto Scorll/Picture Auto Scroll.html" class="link">自動照片滾動</a></li>
-                    <li><a href="../graduation album/Home.html" class="link">畢業紀念冊電子版</a></li>
+                    <li><a href="../Picture Auto Scorll/Picture Auto Scroll.html" class="link">Auto Photo Scroll</a></li>
+                    <li><a href="../graduation album/Home.html" class="link">Graduation Album</a></li>
                 </ul>
             </div>
             <div class="menu-item">
-                <span class="menu-label" id="other">其他</span>
+                <span class="menu-label" id="other">Other</span>
                 <ul class="dropdown" id="other-menu">
-                    <li><a href="../chatbot/index.html" class="link">聊天機器人</a></li>
-                    <li><a href="../piano/piano.html" class="link">鋼琴</a></li>
-                    <li><a href="../Music-Player/index.html" class="link">音樂播放器</a></li>
-                    <li><a href="../Dictionary King/index.html" class="link">字典王</a></li>
-                    <li><a href="../Music-Player/index.html" class="link">音樂播放器</a></li>
-                    <li><a href="../File-Share/index.html" class="link">檔案分享</a></li>
+                    <li><a href="../chatbot/index.html" class="link">Chatbot</a></li>
+                    <li><a href="../piano/piano.html" class="link">Piano</a></li>
+                    <li><a href="../Music-Player/index.html" class="link">Music Player</a></li>
+                    <li><a href="../Dictionary King/index.html" class="link">Dictionary King</a></li>
+                    <li><a href="../Music-Player/index.html" class="link">Music Player</a></li>
+                    <li><a href="../File-Share/index.html" class="link">File Share</a></li>
                 </ul>
             </div>
             <div class="menu-item">
-                <span class="menu-label" id="learning">學習</span>
-                <ul class="dropdown" id="learning-menu">
-                    <li><a href="../Test-Bank-Manager/edit.html" class="link">測驗題庫管理器</a></li>
-                    <li><a href="../Vocabulary-Libry/index.html" class="link">英文單詞庫</a></li>
-                    <li><a href="../Speak&Check/index.html" class="link">口語練習發音與糾正</a></li>
+                <span class="menu-label" id="Learning">Learning</span>
+                <ul class="dropdown" id="Learning-menu">
+                    <li><a href="../Test-Bank-Manager/edit.html" class="link">Test Bank Manager</a></li>
+                    <li><a href="../Vocabulary-Libry/index.html" class="link">Vocabulary Libry</a></li>
+                    <li><a href="../Speak&Check/index.html" class="link">Speak&Check</a></li>
                     <li><a href="../Link/index.html" class="link">Link</a></li>
                 </ul>
             </div>
@@ -61,24 +64,43 @@
                 <div class="menu-item">
                     <span class="menu-label">&#127757</span>
                     <ul class="dropdown" id="language">
-                        <li><a href="index.html" class="link">中文</a></li>
-                        <li><a href="../en-us/index.html" class="link">English</a></li>
+                        <li><a href="../zh-tw/index.html" class="link">中文</a></li>
+                        <li><a href="index.html" class="link">English</a></li>
                     </ul>
+                </div>
+            </div>
+            <div class="menu-item">
+            <div class="chatbot">
+                    <a href="#" class="chatbot" onclick="openChat()"><i class="fa-brands fa-bots"></i></a>
+                </div>
+                    <div class="chat-window" id="chatWindow">
+                        <div class="chat-header">
+                            chatbot
+                            <span class="close-btn" onclick="closeChat()">X</span>
+                        </div>
+                        <div class="chat-log" id="chat-log"></div>
+                        <div class="chat-input">
+                            <input class="message" id="msg" type="text" placeholder="Enter your message...">
+                            <button onclick="send()"><i class="fa-solid fa-paper-plane"></i></button>
+                        </div>
                 </div>
             </div>
         <div class="test">
             <div class="content">
-                <p id="content">以下網站皆為 Beta 測試版</p>
-                <a href="../test-system-online/index.html" class="link" id="TSO">線上測驗系統</a>
-                <a href="../OOXX/index.html" class="link" id="OOXX">井字遊戲</a>
+                <p id="content">These websites are all beta versions.</p>
+                <a href="../test-system-online/index.html" class="link" id="TSO">Test System Online</a>
+                <a href="../OOXX/index.html" class="link" id="OOXX">Tic-Tac-Toe</a>
             </div>
         </div>
         <footer id="footer">
-            &copy;作者: <a href="https://royzeng0317.github.io/HTML/Self-Website/zh-tw/index.html">Roy Zeng</a><br>
-            Beta 測試版網站目前都正在盡全力開發當中<br>
-            為了測試網站是否能正常運作，因此上架測試<br>
-            但功能目前還不完整，敬請見諒
+            &copy; Writer: <a href="https://royzeng0317.github.io/HTML/Self-Website/us-en/index.html" class="link">Roy Zeng</a><br>
+            Our beta websites are still in active development.<br>
+            They're available now to help us test if everything <br>
+            works as intended.<br>
+            Some features are still missing, and we appreciate your<br>
+            patience and understanding!
         </footer>
     </body>
     <script src="../script.js"></script>
+    <script src="script.js"></script>
 </html>
