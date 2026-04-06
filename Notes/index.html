@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>極簡筆記本</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Noto+Sans+TC:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- 右上角設定按鈕 -->
+    <button id="settings-btn" class="icon-btn settings-trigger" title="設定">⚙️</button>
+
+    <div class="app-container">
+        <header>
+            <h1>My Notes</h1>
+            <p>捕捉稍縱即逝的靈感</p>
+        </header>
+
+        <main>
+            <section class="input-card">
+                <input type="text" id="note-title" placeholder="標題">
+                <textarea id="note-content" placeholder="開始寫點什麼..." rows="3"></textarea>
+                <div class="input-footer">
+                    <button id="add-btn">儲存筆記</button>
+                </div>
+            </section>
+
+            <div id="notes-grid" class="notes-grid">
+                <!-- 筆記卡片自動生成 -->
+            </div>
+        </main>
+    </div>
+
+    <!-- 設定彈窗 -->
+    <div id="settings-modal" class="modal-overlay">
+        <div class="modal-card">
+            <div class="modal-header">
+                <h2>設定</h2>
+                <span class="close-btn" id="close-modal">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="setting-row">
+                    <span>深色模式</span>
+                    <label class="switch">
+                        <input type="checkbox" id="dark-mode-toggle">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                <div class="setting-row">
+                    <span>清除所有筆記</span>
+                    <button id="clear-all-btn" class="danger-btn">清除</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
