@@ -1,0 +1,4 @@
+CREATE TABLE
+VALUE(255) = (Roy, A1qaz9ol.)
+VALUE(255) = 
+VALUE(255) = 
