@@ -10,6 +10,8 @@
 🔗 https://linugapath.web.app/
 I'm upload the spekaing with the AI modules this functions, can use at the firefox, edge, chrome, and Safari browser.
 ## The 3D Circuit Labview are development now, are coming soon...
+## The New Exam Bank Manager platfrom:
+🔗 https://exam-bank-manager.web.app/
 ### 這是我網站架設的平台，我會使用AI人工智慧去協助完成。你會發現很多網站
 ### 像是: 計算機、學習網站還有更多的網站
 ### 如果你有好的想法或是友網站想要架設的，我可以幫忙實現。
@@ -22,3 +24,5 @@ I'm upload the spekaing with the AI modules this functions, can use at the firef
 🔗 https://linugapath.web.app/
 我更新了與AI人工智慧聊天這個功能，可以在Firefox、Edge、Chrome及Safari瀏覽器使用。
 ## 3D 電路實驗室還在開發中... 即將上架
+## 新版題庫平台
+🔗 https://exam-bank-manager.web.app/
