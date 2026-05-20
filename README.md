@@ -8,7 +8,8 @@
 🔗 https://test-exam-db65a.web.app/frontend/index.html#
 ## The New Englsih Leanring Platfrom:
 🔗 https://linugapath.web.app/
-I'm upload the spekaing with the AI modules this functions, can use at the firefox, edge, chrome, and Safari browser.
+I'm update the spekaing with the AI modules this functions, can use at the firefox, edge, chrome, and Safari browser.
+I'm update the basic grammer, the five sentence.
 ## The 3D Circuit Labview are development now, are coming soon...
 ## The New Exam Bank Manager platfrom:
 🔗 https://exam-bank-manager.web.app/
@@ -23,6 +24,7 @@ I'm upload the spekaing with the AI modules this functions, can use at the firef
 ## 新的英文學習平台: (主打英輔英學習
 🔗 https://linugapath.web.app/
 我更新了與AI人工智慧聊天這個功能，可以在Firefox、Edge、Chrome及Safari瀏覽器使用。
+我更新了英文基礎文法，五大句型。
 ## 3D 電路實驗室還在開發中... 即將上架
 ## 新版題庫平台
 🔗 https://exam-bank-manager.web.app/
