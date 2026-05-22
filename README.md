@@ -13,6 +13,8 @@ I'm update the basic grammer, the five sentence.
 ## The 3D Circuit Labview are development now, are coming soon...
 ## The New Exam Bank Manager platfrom:
 🔗 https://exam-bank-manager.web.app/
+## The New stocks imformation platfrom:
+🔗 https://stocks-global.web.app/
 ### 這是我網站架設的平台，我會使用AI人工智慧去協助完成。你會發現很多網站
 ### 像是: 計算機、學習網站還有更多的網站
 ### 如果你有好的想法或是友網站想要架設的，我可以幫忙實現。
@@ -28,3 +30,5 @@ I'm update the basic grammer, the five sentence.
 ## 3D 電路實驗室還在開發中... 即將上架
 ## 新版題庫平台
 🔗 https://exam-bank-manager.web.app/
+## 新版個股資訊平台
+🔗 https://stocks-global.web.app/
