@@ -24,6 +24,8 @@ I'm update the can save the my total investing, also have the k line, and immedi
 ### 像是: 計算機、學習網站還有更多的網站
 ### 如果你有好的想法或是友網站想要架設的，我可以幫忙實現。
 ### 提醒: Github僅能使用前端，不支援後端
+### 這裡是完整的網站平台
+## 🔗https://royzeng0317.github.io/HTML/zh-tw/index.html
 ### 如果我有新上架新網站，我會放在下方的更新日誌。
 ## 今日更新日誌:
 ## 新版即測即評平台:
