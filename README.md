@@ -16,6 +16,8 @@ I'm update the basic grammer, the five sentence.
 ## The New stocks imformation platfrom:
 🔗 https://stocks-global.web.app/
 I'm update the can save the my total investing, also have the k line, and immediately price.
+## The new file share platfrom
+🔗 https://file-share-platfrom.web.app
 ### 這是我網站架設的平台，我會使用AI人工智慧去協助完成。你會發現很多網站
 ### 像是: 計算機、學習網站還有更多的網站
 ### 如果你有好的想法或是友網站想要架設的，我可以幫忙實現。
@@ -34,3 +36,5 @@ I'm update the can save the my total investing, also have the k line, and immedi
 ## 新版個股資訊平台
 🔗 https://stocks-global.web.app/
 我更新了我的持股總帳、k線圖以及即時走勢。
+## 新版檔案分享平台
+🔗 https://file-share-platfrom.web.app
