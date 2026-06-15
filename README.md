@@ -12,7 +12,8 @@
 🔗 https://linugapath.web.app/
 I'm update the spekaing with the AI modules this functions, can use at the firefox, edge, chrome, and Safari browser.
 I'm update the basic grammer, the five sentence.
-## The 3D Circuit Labview are development now, are coming soon...
+## The 3D Circuit Labview
+https://circuit-lab-3d.web.app/
 ## The New Exam Bank Manager platfrom:
 🔗 https://exam-bank-manager.web.app/
 ## The New stocks imformation platfrom:
@@ -34,7 +35,8 @@ I'm update the can save the my total investing, also have the k line, and immedi
 🔗 https://linugapath.web.app/
 我更新了與AI人工智慧聊天這個功能，可以在Firefox、Edge、Chrome及Safari瀏覽器使用。
 我更新了英文基礎文法，五大句型。
-## 3D 電路實驗室還在開發中... 即將上架
+## 3D 電路實驗室還在開發中
+https://circuit-lab-3d.web.app/
 ## 新版題庫平台
 🔗 https://exam-bank-manager.web.app/
 ## 新版個股資訊平台
