@@ -1,50 +1,70 @@
-body{
+:root {
+    --bg: #0f172a;
+    --panel: #1e293b;
+    --text: #e5e7eb;
+    --muted: #94a3b8;
+    --accent: #3b82f6;
+    --border: #334155;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
     margin: 0;
     padding: 0;
-    background: #000;
+    background: var(--bg);
+    color: var(--text);
+    font-family: system-ui, -apple-system, sans-serif;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    min-height: 100vh;
+}
+
+.top-menu {
+    padding: 20px;
     text-align: center;
+    border-bottom: 1px solid var(--border);
+    background: var(--panel);
 }
-.top-menu{
-    color: #fff;
-    padding: 10px;
-    justify-content: center;
-    display: flex;
+
+.top-menu span {
+    font-size: 24px;
+    font-weight: 600;
 }
-.top-menu span{
-    font-size: 20px;
-}
-.content{
-    display: flex;
-    align-items: center;
-    height: 90vh;
-}
-.ul{
+
+.content {
+    flex: 1;
     display: flex;
     align-items: center;
-    gap: 1.2rem;
-    list-style: none;
-    background: #1d1d1d;
+    padding: 24px;
 }
-.accordion{
+
+.accordion {
     width: 100%;
     display: flex;
     justify-content: center;
-    height: 400px;
     gap: 16px;
-    transition: 0.3s;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-wrap: wrap;
 }
-.accordion li{
+
+.accordion li {
     position: relative;
     overflow: hidden;
-    flex: 0 0 80px;
-    border-radius: 50px;
-    opacity: 0.75;
+    flex: 0 0 160px;
+    border-radius: 16px;
+    opacity: 0.85;
     cursor: pointer;
+    transition: all 0.3s;
+    height: 200px;
+    border: 1px solid var(--border);
 }
-.accordion li img{
+
+.accordion li img {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -53,21 +73,8 @@ body{
     height: 100%;
     object-fit: cover;
 }
-.accordion li,
-.accordion li img,
-.accordion li .content,
-.accordion li .content span{
-    transition: 0.3s;
-}
-.accordion p{
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 45px;
-    border-bottom: 2px solid #fff;
-    margin-bottom: 10px;
-    white-space: nowrap;
-}
-.accordion li .content{
+
+.accordion li .content {
     position: absolute;
     top: 0;
     left: 0;
@@ -76,50 +83,60 @@ body{
     z-index: 1;
     color: #fff;
     padding: 15px;
-    background: #02022e;
-    background: 
-    linear-gradient(
-        0deg,
-        rgba(0 0 0 / 70%)
-        10%,
-        rgba(255 255 255 / 0%)
-        100%
-    );
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.7) 10%, rgba(255, 255, 255, 0) 100%);
     opacity: 0;
     visibility: hidden;
+    transition: all 0.3s;
+    display: flex;
+    align-items: flex-end;
 }
-.accordion :hover{
-    gap: 0;
+
+.accordion li .content span {
+    font-size: 14px;
+    font-weight: 500;
 }
-.accordion li .content span{
+
+.caption {
     position: absolute;
-    z-index: 3;
+    bottom: 12px;
     left: 50%;
-    bottom: 50px;
     translate: -50%;
-    scale: 0.85;
-    visibility: hidden;
-    opacity: 0;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+    width: 100%;
+    padding: 0 8px;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
 }
-.accordion li:hover{
-    flex: 0 1 300px;
-    scale: 1.1;
+
+.accordion li:hover {
+    scale: 1.05;
     z-index: 10;
     opacity: 1;
+    border-color: var(--accent);
 }
-.accordion li:hover .content{
+
+.accordion li:hover .content {
     opacity: 1;
     visibility: visible;
 }
-.accordion li:hover span{
-    scale: 1;
-    opacity: 1;
-    visibility: visible;
+
+footer {
+    color: var(--muted);
+    padding: 16px;
+    text-align: center;
+    font-size: 14px;
+    border-top: 1px solid var(--border);
+    background: var(--panel);
 }
-footer{
-    color: #fff;
-    margin: 0;
-    height: 26px;
-    display: flex;
-    justify-content: center;
+
+@media (max-width: 600px) {
+    .accordion {
+        gap: 12px;
+    }
+    .accordion li {
+        flex: 0 0 140px;
+        height: 160px;
+    }
 }

@@ -1,33 +1,39 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
-        <title>Chats</title>
-    </head>
-    <body>
-        <span>Chats</span>
-        <form action="">
-            <div class="chat-container">
-                <div class="messages" id="messages"></div>
-                <div class="input-container">
-                    <input type="text" class="user" id="user" placeholder="Your Name">
-                    <input type="text" class="msg" id="msg" placeholder="Enter the message">
-                    <input type="checkbox" class="burnEnabled" id="burnEnabled">Burn mode
-                    <select name="" id="brunTime">
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <title>Chats</title>
+</head>
+<body>
+    <div class="container">
+        <div class="chat-container">
+            <div class="chat-header">
+                <span><i class="fa-solid fa-comments"></i> Chats</span>
+            </div>
+            <div class="messages" id="messages"></div>
+            <div class="input-container">
+                <input type="text" id="user" placeholder="Your Name">
+                <input type="text" id="msg" placeholder="Enter the message">
+                <div class="burn-options">
+                    <label>
+                        <input type="checkbox" id="burnEnabled"> Burn mode
+                    </label>
+                    <select id="brunTime">
                         <option value="5">5s</option>
                         <option value="10">10s</option>
                         <option value="30">30s</option>
                         <option value="60">1min</option>
                         <option value="300">5min</option>
-                        <option value=""></option>
                     </select>
-                    <button type="button" onclick="send()"><i class="fa-solid fa-paper-plane"></i></button>
                 </div>
+                <button id="sendBtn"><i class="fa-solid fa-paper-plane"></i></button>
             </div>
-        </form>
-    </body>
+        </div>
+    </div>
     <script src="script.js"></script>
     <script src="/socket.io/socket.io.js"></script>
+</body>
 </html>

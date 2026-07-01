@@ -1,43 +1,46 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <link rel="stylesheet" href="style.css">
-        <title>Dictionary King</title>
-    </head>
-    <body>
-        <nav>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Dictionary King</title>
+</head>
+<body>
+    <nav>
+        <div class="nav-inner">
             <header>Who's the King of the English Dictionary?</header>
-            <div class="container">
-                <div class="box form-box">
-                    <div class="menu">
-                        <ul>
-                            <a href="../index.html" class="link">Home</a>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </nav>
+            <ul>
+                <li><a href="../index.html" class="link">Home</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
         <div class="menu-wrapper">
-            <button class="rules" onclick="tooggle('rules')">Rules</button>
+            <button class="rules" id="rulesBtn">Rules</button>
             <ul class="dropdown-rules" id="dropdown-rules">
                 <li>
                     <span>How to Play:</span>
                     <p>The screen will show a forbidden word.</p>
                     <p>Each player must quickly say a new English word that starts with a capital letter.</p>
-                    <p>If someone says the banned word or repeats a word that;s already been used, thry're eliminate.</p>
+                    <p>If someone says the banned word or repeats a word that's already been used, they're eliminated.</p>
                 </li>
             </ul>
         </div>
+
         <div class="vocabulary">
-            <div class="word" id="word"></div>
-            <button class="text" onclick="generate()">Generate</button>
+            <div class="word" id="word">Press Generate to start</div>
+            <button class="text" id="generateBtn">Generate</button>
         </div>
+
         <div class="history" id="history">
-            <button class="history-btn" onclick="toggleHistory()">History</button>
+            <button class="history-btn" id="historyBtn">History</button>
             <div class="history-list" id="history-list"></div>
         </div>
-        <footer>&copy;Writer: Roy Yan</footer>
-    </body>
+    </main>
+
+    <footer>&copy; Writer: Roy Yan</footer>
     <script src="script.js"></script>
+</body>
 </html>

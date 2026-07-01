@@ -1,160 +1,225 @@
-body{
-    background: #44FF66;
+:root {
+    --bg: #0f172a;
+    --panel: #1e293b;
+    --text: #e5e7eb;
+    --muted: #94a3b8;
+    --accent: #a855f7;
+    --accent2: #3b82f6;
+    --border: #334155;
 }
-.search{
-    display: none;
+
+* {
+    box-sizing: border-box;
 }
-.player{
-    width: 100%;
-    margin-top: 20px;
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: system-ui, -apple-system, sans-serif;
+    min-height: 100vh;
 }
-.list{
-    max-height: 300px;
-    overflow-y: auto;
-}
-.list::-webkit-scrollbar{
-    width: 6px;
-}
-.list::-webkit-scrollbar-track{
-    background: #f1f1f1;
-    border-radius: 10px;
-}
-.list::-webkit-scrollbar-thumb{
-    background: #A327FF;
-    border-radius: 10px;
-}
-.list{
-    display: none;
-}
-#list li{
-    margin: 5px 0;
-    list-style: none;
-}
-.queue{
-    margin-top: 20px;
-    padding: 10px;
-    background: #d0ffd0;
-    border-radius: 10px;
-}
-audio{
-    width: 100%;
-    margin-top: 20px;
-}
-.msgbox{
-    display: none;
-    position: fixed;
-    top: 20%;
-    left: 50%;
-    transform: translateX(-50%);
-    background: #fff;
-    padding: 30px;
-    border-radius: 16px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    z-index: 9999;
-    width: 20%;
-    color: #000;
-    margin-bottom: 15px;
-    align-items: center;
-}
-.msgbox span{
-    font-size: 20px;
-    font-weight: bold;
-    display: block;
-    margin-bottom: 10px;
-    text-align: center;
-}
-.msg-list{
-    list-style: none;
-    padding-left: 0;
-    line-height: 2;
-    font-size: 16px;
-    margin-bottom: 20px;
-    flex-direction: column;
-}
-.msg-list li{
-    border-bottom: 1px solid #e0e0e0;
-    padding: 6px 0;
-    line-height: 1.6;
-    display: flex;
-}
-.floatHint{
-    position: absolute;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    background: rgba(0, 0, 0, 0.8);
-    color: white;
-    padding: 10px 20px;
-    font-size: 18px;
-    z-index: 9999;
-    margin-left: 18rem;
-    display: none;
-    border-radius: 8px;
-}
-.lyrics-list{
-    list-style: none;
-    max-height: 60vh;
-    overflow-y: auto;
-}
-.lyrics{
-    overflow-y: auto;
-    height: 50vh;
-    text-align: center;
-    font-size: 18px;
-    color: #000;
-    text-decoration: none;
-}
-.lyrics-line{
-    color: #000;
-    font-size: 16px;
-    line-height: 1.5;
-    transition: color 0.3s ease, font-size 0.3s ease;
-}
-.lyrics-line.active{
-    color: #00A2E8;
-    font-size: 36px;
-    font-weight: bold;
-}
-.container{
+
+.container {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 90vh;
+    min-height: 100vh;
+    padding: 24px;
 }
-.form-box header{
-    background: #24FF2D;
-    display: flex;
-    flex-direction: column;
-    padding: 30px 30px;
-    border-radius: 25px;
-    box-shadow: 0 0 125px 0 rgba(0, 0, 0, 0.1),
-                0 30px 50px -45px rgba(0, 0, 0, 0.5);
-}
-.form-box{
-    width: 450px;
-    margin: 0px 10px;
-}
-.form-box header{
-    font-size: 25px;
-    font-weight: 600;
-    padding-bottom: 1px solid #ccc;
-    margin-bottom: 12px;
-    align-items: center;
-}
-.form-box form .song{
-    display: flex;
-    margin-bottom: 15px;
-    flex-direction: column;
-}
-.form-box form .input input{
-    height: 45px;
+
+.box {
     width: 100%;
-    font-size: 25px;
-    padding: 0 12px;
-    border-radius: 10px;
-    border: 1px solid #ccc;
-    outline: none;
+    max-width: 500px;
 }
-.text{
+
+.form-box {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
+}
+
+.form-box header {
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border);
+}
+
+.search {
+    width: 100%;
+    padding: 12px 16px;
+    font-size: 16px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: var(--bg);
+    color: var(--text);
+    outline: none;
+    margin-bottom: 12px;
+}
+
+.search:focus {
+    border-color: var(--accent);
+}
+
+.text {
     text-decoration: none;
-    color: #A327FF;
+    color: var(--accent);
+    font-size: 15px;
+    display: inline-block;
+    padding: 8px 16px;
+    border-radius: 8px;
+    transition: background 0.2s;
+}
+
+.text:hover {
+    background: rgba(168, 85, 247, 0.1);
+}
+
+#song-list-btn, #search-btn {
+    margin: 4px;
+}
+
+.list {
+    max-height: 300px;
+    overflow-y: auto;
+    display: none;
+    margin: 12px 0;
+    padding: 0;
+}
+
+.list.show {
+    display: block;
+}
+
+.list::-webkit-scrollbar {
+    width: 6px;
+}
+
+.list::-webkit-scrollbar-track {
+    background: var(--bg);
+    border-radius: 10px;
+}
+
+.list::-webkit-scrollbar-thumb {
+    background: var(--accent);
+    border-radius: 10px;
+}
+
+#list li {
+    margin: 4px 0;
+    list-style: none;
+}
+
+#list li a {
+    display: block;
+    padding: 10px 12px;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    transition: border-color 0.2s;
+}
+
+#list li a:hover {
+    border-color: var(--accent);
+}
+
+.queue {
+    margin-top: 16px;
+    padding: 12px;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    font-size: 14px;
+}
+
+.player {
+    width: 100%;
+    margin-top: 16px;
+    border-radius: 8px;
+}
+
+.msgbox {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--panel);
+    border: 1px solid var(--border);
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    width: 90%;
+    max-width: 360px;
+    color: var(--text);
+}
+
+.msgbox span {
+    font-size: 20px;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+.msg-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    line-height: 2;
+    font-size: 14px;
+}
+
+.msg-list li {
+    border-bottom: 1px solid var(--border);
+    padding: 6px 0;
+}
+
+.lyrics-list {
+    list-style: none;
+    padding: 0;
+    margin: 12px 0;
+    max-height: 40vh;
+    overflow-y: auto;
+}
+
+.lyrics {
+    overflow-y: auto;
+    max-height: 40vh;
+    text-align: center;
+    font-size: 18px;
+    color: var(--text);
+}
+
+.lyrics-line {
+    color: var(--muted);
+    font-size: 15px;
+    line-height: 1.5;
+    transition: color 0.3s ease, font-size 0.3s ease;
+}
+
+.lyrics-line.active {
+    color: var(--accent);
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.floatHint {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 12px 24px;
+    font-size: 18px;
+    z-index: 9999;
+    display: none;
+    border-radius: 8px;
 }

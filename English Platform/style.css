@@ -1,28 +1,107 @@
-.profile img{
-        border-radius: 5px;
-        box-shadow: 3 2 2 rgba(0, 0, 0, 0.125);
-    }
-.profile-information input{
-    height: 20px;
-    width: 200px;
-    flex-direction: column;
-    display: flex;
-    box-shadow: 0 0 10 rgba(0, 0, 0, 0.5);
+:root {
+    --bg: #0f172a;
+    --panel: #1e293b;
+    --text: #e5e7eb;
+    --muted: #94a3b8;
+    --accent: #3b82f6;
+    --border: #334155;
 }
-.contact-us{
-    flex-direction: column;
-    display: flex;
+
+* {
+    box-sizing: border-box;
 }
-@media (max-width: 480px) {
-    .profile img{
-        border-radius: 5px;
-        box-shadow: 0 0 2 rgba(0, 0, 0, 0.125);
-    }
-    .container{
-        padding: 30px;
-    }
-    .menu{
-        flex-direction: column;
-        padding: 20px;
-    }
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: system-ui, -apple-system, sans-serif;
+    min-height: 100vh;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile {
+    position: fixed;
+    top: 16px;
+    right: 24px;
+    z-index: 100;
+}
+
+.profile img {
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid var(--border);
+    transition: border-color 0.2s;
+}
+
+.profile img:hover {
+    border-color: var(--accent);
+}
+
+.profile-information {
+    max-width: 400px;
+    width: 100%;
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 24px;
+    margin-bottom: 24px;
+}
+
+.profile-information span {
+    font-size: 20px;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 16px;
+}
+
+.profile-information label {
+    display: block;
+    margin-bottom: 4px;
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.profile-information input {
+    width: 100%;
+    padding: 10px 12px;
+    margin-bottom: 12px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--bg);
+    color: var(--text);
+    outline: none;
+}
+
+.profile-information input:focus {
+    border-color: var(--accent);
+}
+
+.contact-us {
+    max-width: 400px;
+    width: 100%;
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.contact-us span {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.contact-us label {
+    color: var(--muted);
+}
+
+.society {
+    display: flex;
+    gap: 12px;
 }

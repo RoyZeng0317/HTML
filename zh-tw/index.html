@@ -1,22 +1,22 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="../style.css">
-        <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="https://royzeng0317.github.io/HTML/style.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
-        <title>HTML 網站首頁</title>
-    </head>
-    <body>
-        <nav>
-            <header id="header"> HTML 網站首頁</header>            
-            <ul>
-                <li><a href="index.html" class="Home" id="home">首頁</a></li>
-            </ul>        
-        </nav>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <title>HTML 網站首頁</title>
+</head>
+<body>
+    <header id="header">HTML 網站首頁</header>
+    <nav>
+        <ul>
+            <li><a href="index.html" class="Home" id="home">首頁</a></li>
+        </ul>
+    </nav>
+
+    <main>
         <div class="menu-wrapper">
             <div class="menu-item">
                 <span class="menu-label" id="clock">時鐘</span>
@@ -35,8 +35,8 @@
             <div class="menu-item">
                 <span class="menu-label" id="photo">照片</span>
                 <ul class="dropdown" id="photo-menu">
-                    <li><a href="../Picture Auto Scorll/Picture Auto Scroll.html" class="link">自動照片滾動</a></li>
-                    <li><a href="../graduation album/Home.html" class="link">畢業紀念冊</a></li>
+                    <li><a href="../Picture%20Auto%20Scorll/Picture%20Auto%20Scroll.html" class="link">自動照片滾動</a></li>
+                    <li><a href="../graduation%20album/Home.html" class="link">畢業紀念冊</a></li>
                 </ul>
             </div>
             <div class="menu-item">
@@ -44,8 +44,16 @@
                 <ul class="dropdown" id="english-menu">
                     <li><a href="https://linugapath.web.app/" class="link">英文學習</a></li>
                     <li><a href="../Vocabulary-Libry/index.html" class="link">單字庫</a></li>
-                    <li><a href="../Dictionary King/index.html" class="link">字典王</a></li>
+                    <li><a href="../Dictionary%20King/index.html" class="link">字典王</a></li>
                     <li><a href="../Speak&Check/index.html" class="link">口說檢查</a></li>
+                </ul>
+            </div>
+            <div class="menu-item">
+                <span class="menu-label" id="Learning">學習</span>
+                <ul class="dropdown" id="learning-menu">
+                    <li><a href="https://circuit-lab-3d.web.app/" class="link">模擬電路實驗室</a></li>
+                    <li><a href="https://exam-bank-manager.web.app/" class="link">題庫</a></li>
+                    <li><a href="../Link/index.html" class="link">連結</a></li>
                 </ul>
             </div>
             <div class="menu-item">
@@ -56,55 +64,49 @@
                     <li><a href="../piano/piano.html" class="link">鋼琴</a></li>
                 </ul>
             </div>
+        </div>
+
+        <div class="language">
             <div class="menu-item">
-                <span class="menu-label" id="Learning">學習</span>
-                <ul class="dropdown" id="Learning-menu">
-                    <li><a href="https://circuit-lab-3d.web.app/" class="link">模擬驗路實驗室</a></li>
-                    <li><a href="https://exam-bank-manager.web.app/" class="link">題庫</a></li>
-                    <li><a href="../Link/index.html" class="link">連結</a></li>
+                <span class="menu-label">&#127757;</span>
+                <ul class="dropdown" id="language-menu">
+                    <li><a href="index.html" class="link">中文</a></li>
+                    <li><a href="../en-us/index.html" class="link">English</a></li>
                 </ul>
             </div>
         </div>
-            <div class="language">
-                <div class="menu-item">
-                    <span class="menu-label">&#127757</span>
-                    <ul class="dropdown" id="language">
-                        <li><a href="index.html" class="link">中文</a></li>
-                        <li><a href="../en-us/index.html" class="link">English</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="menu-item">
-            <div class="chatbot">
-                    <a href="#" class="chatbot" onclick="openChat()"><i class="fa-brands fa-bots"></i></a>
-                </div>
-                    <div class="chat-window" id="chatWindow">
-                        <div class="chat-header">
-                            chatbot
-                            <span class="close-btn" onclick="closeChat()">X</span>
-                        </div>
-                        <div class="chat-log" id="chat-log"></div>
-                        <div class="chat-input">
-                            <input class="message" id="msg" type="text" placeholder="Enter your message...">
-                            <button onclick="send()"><i class="fa-solid fa-paper-plane"></i></button>
-                        </div>
-                </div>
-            </div>
-        <div class="test">
-            <div class="content">
-                <p id="content">下列網站皆屬 Beta 測試版</p>
-                <a href="https://test-exam-db65a.web.app/frontend/index.html#" class="link" id="TSO">即測即評線上測驗系統</a>
-                <a href="../OOXX/index.html" class="link" id="OOXX">井字遊戲</a>
-            </div>
+
+        <div class="content">
+            <p id="content-text">下列網站皆屬 Beta 測試版</p>
+            <a href="https://test-exam-db65a.web.app/frontend/index.html#" class="link" id="TSO">即測即評線上測驗系統</a>
+            <a href="../OOXX/index.html" class="link" id="OOXX">井字遊戲</a>
         </div>
-        <footer id="footer">
-            &copy; 作者: <a href="https://royzeng0317.github.io/HTML/Self-Website/us-en/index.html" class="link">曾星鑫</a><br>
-            我們測試網站現在人在開發階段<br>
-            並且還在測試階段<br>
-            有些功能尚有錯誤，我們還在努力<br>
-            敬請見諒
-        </footer>
-    </body>
+    </main>
+
+    <div class="chatbot" id="chatbot-icon">
+        <a href="#" id="chatbot-btn"><i class="fa-solid fa-robot"></i></a>
+    </div>
+
+    <div class="chat-window" id="chatWindow">
+        <div class="chat-header">
+            <span>Chatbot</span>
+            <span class="close-btn" id="closeChat">✕</span>
+        </div>
+        <div class="chat-log" id="chat-log"></div>
+        <div class="chat-input">
+            <input id="msg" type="text" placeholder="請輸入訊息...">
+            <button id="sendBtn"><i class="fa-solid fa-paper-plane"></i></button>
+        </div>
+    </div>
+
+    <footer id="footer">
+        &copy; 作者: <a href="https://royzeng0317.github.io/HTML/Self-Website/us-en/index.html" class="link">曾星鑫</a><br>
+        我們的測試網站正在開發階段<br>
+        並且還在測試階段<br>
+        有些功能尚有錯誤，我們還在努力<br>
+        敬請見諒
+    </footer>
+
     <script src="../script.js"></script>
-    <script src="script.js"></script>
+</body>
 </html>

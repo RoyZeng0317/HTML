@@ -1,22 +1,22 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="../style.css">
-        <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="https://royzeng0317.github.io/HTML/style.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
-        <title>HTML Website Home</title>
-    </head>
-    <body>
-        <nav>
-            <header id="header"> HTML Website Home</header>            
-            <ul>
-                <li><a href="index.html" class="Home" id="home">Home</a></li>
-            </ul>        
-        </nav>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <title>HTML Website Home</title>
+</head>
+<body>
+    <header id="header">HTML Website Home</header>
+    <nav>
+        <ul>
+            <li><a href="index.html" class="Home" id="home">Home</a></li>
+        </ul>
+    </nav>
+
+    <main>
         <div class="menu-wrapper">
             <div class="menu-item">
                 <span class="menu-label" id="clock">Clock</span>
@@ -35,25 +35,25 @@
             <div class="menu-item">
                 <span class="menu-label" id="photo">Photo</span>
                 <ul class="dropdown" id="photo-menu">
-                    <li><a href="../Picture Auto Scorll/Picture Auto Scroll.html" class="link">Auto Photo Scroll</a></li>
-                    <li><a href="../graduation album/Home.html" class="link">Graduation Album</a></li>
+                    <li><a href="../Picture%20Auto%20Scorll/Picture%20Auto%20Scroll.html" class="link">Auto Photo Scroll</a></li>
+                    <li><a href="../graduation%20album/Home.html" class="link">Graduation Album</a></li>
                 </ul>
             </div>
             <div class="menu-item">
                 <span class="menu-label" id="English">English</span>
-                <ul class="dropdown" id="other-menu">
+                <ul class="dropdown" id="english-menu">
                     <li><a href="https://linugapath.web.app/" class="link">LinguaPath</a></li>
                     <li><a href="../Vocabulary-Libry/index.html" class="link">Vocabulary Libry</a></li>
-                    <li><a href="../Dictionary King/index.html" class="link">Dictionary King</a></li>
-                    <li><a href="../Speak&Check/index.html" class="link">Speak&Check</a></li>
+                    <li><a href="../Dictionary%20King/index.html" class="link">Dictionary King</a></li>
+                    <li><a href="../Speak&Check/index.html" class="link">Speak&amp;Check</a></li>
                 </ul>
             </div>
             <div class="menu-item">
                 <span class="menu-label" id="Learning">Learning</span>
-                <ul class="dropdown" id="Learning-menu">
+                <ul class="dropdown" id="learning-menu">
                     <li><a href="https://circuit-lab-3d.web.app/" class="link">Circuit Lab 3D</a></li>
                     <li><a href="https://exam-bank-manager.web.app/" class="link">Test Bank Manager</a></li>
-                    <li><a href="../Link/index.html" class="link">Link</a></li>                    
+                    <li><a href="../Link/index.html" class="link">Link</a></li>
                 </ul>
             </div>
             <div class="menu-item">
@@ -66,47 +66,47 @@
                 </ul>
             </div>
         </div>
-            <div class="language">
-                <div class="menu-item">
-                    <span class="menu-label">&#127757</span>
-                    <ul class="dropdown" id="language">
-                        <li><a href="../zh-tw/index.html" class="link">中文</a></li>
-                        <li><a href="index.html" class="link">English</a></li>
-                    </ul>
-                </div>
-            </div>
+
+        <div class="language">
             <div class="menu-item">
-            <div class="chatbot">
-                    <a href="#" class="chatbot" onclick="openChat()"><i class="fa-brands fa-bots"></i></a>
-                </div>
-                    <div class="chat-window" id="chatWindow">
-                        <div class="chat-header">
-                            chatbot
-                            <span class="close-btn" onclick="closeChat()">X</span>
-                        </div>
-                        <div class="chat-log" id="chat-log"></div>
-                        <div class="chat-input">
-                            <input class="message" id="msg" type="text" placeholder="Enter your message...">
-                            <button onclick="send()"><i class="fa-solid fa-paper-plane"></i></button>
-                        </div>
-                </div>
-            </div>
-        <div class="test">
-            <div class="content">
-                <p id="content">These websites are all beta versions.</p>
-                <a href="https://test-exam-db65a.web.app/frontend/index.html#" class="link" id="TSO">TEST Exam Online System</a>
-                <a href="../OOXX/index.html" class="link" id="OOXX">Tic-Tac-Toe</a>
+                <span class="menu-label">&#127757;</span>
+                <ul class="dropdown" id="language-menu">
+                    <li><a href="../zh-tw/index.html" class="link">中文</a></li>
+                    <li><a href="index.html" class="link">English</a></li>
+                </ul>
             </div>
         </div>
-        <footer id="footer">
-            &copy; Author: <a href="https://royzeng0317.github.io/HTML/Self-Website/us-en/index.html" class="link">Roy Zeng</a><br>
-            Our beta websites are still in active development.<br>
-            They're available now to help us test if everything <br>
-            works as intended.<br>
-            Some features are still missing, and we appreciate your<br>
-            patience and understanding!
-        </footer>
-    </body>
+
+        <div class="content">
+            <p id="content-text">These websites are all beta versions.</p>
+            <a href="https://test-exam-db65a.web.app/frontend/index.html#" class="link" id="TSO">TEST Exam Online System</a>
+            <a href="../OOXX/index.html" class="link" id="OOXX">Tic-Tac-Toe</a>
+        </div>
+    </main>
+
+    <div class="chatbot" id="chatbot-icon">
+        <a href="#" id="chatbot-btn"><i class="fa-solid fa-robot"></i></a>
+    </div>
+
+    <div class="chat-window" id="chatWindow">
+        <div class="chat-header">
+            <span>Chatbot</span>
+            <span class="close-btn" id="closeChat">✕</span>
+        </div>
+        <div class="chat-log" id="chat-log"></div>
+        <div class="chat-input">
+            <input id="msg" type="text" placeholder="Enter your message...">
+            <button id="sendBtn"><i class="fa-solid fa-paper-plane"></i></button>
+        </div>
+    </div>
+
+    <footer id="footer">
+        &copy; Author: <a href="https://royzeng0317.github.io/HTML/Self-Website/us-en/index.html" class="link">Roy Zeng</a><br>
+        Our beta websites are still in active development.<br>
+        They're available now to help us test if everything works as intended.<br>
+        Some features are still missing, and we appreciate your patience and understanding!
+    </footer>
+
     <script src="../script.js"></script>
-    <script src="script.js"></script>
+</body>
 </html>
