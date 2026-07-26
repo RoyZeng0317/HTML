@@ -19,6 +19,7 @@ https://circuit-lab-3d.web.app/
 ## The New stocks imformation platfrom:
 🔗 https://stocks-global.web.app/
 I'm update the can save the my total investing, also have the k line, and immediately price.
+Add the news button can watch the news.(P.M. 15:00 everyday update.
 ## The new file share platfrom
 🔗 https://file-share-platfrom.web.app
 ### 這是我網站架設的平台，我會使用AI人工智慧去協助完成。你會發現很多網站
@@ -42,5 +43,6 @@ https://circuit-lab-3d.web.app/
 ## 新版個股資訊平台
 🔗 https://stocks-global.web.app/
 我更新了我的持股總帳、k線圖以及即時走勢。
+新增了新聞按鈕查看新聞(每日下午三點更新
 ## 新版檔案分享平台
 🔗 https://file-share-platfrom.web.app
