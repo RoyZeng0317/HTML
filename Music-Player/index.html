@@ -13,12 +13,18 @@
                 <header>Music Player</header>
                 <a href="#" onclick="Search(event)" id="search-btn" class="text">🔍 搜尋</a>
                 <form action="" method="post">
-                    <div class="song input" id="song-input">
+                    <div class="song-input" id="song-input">
                         <input type="text" id="search" class="search" onkeyup="onSearch()" placeholder="Search for song...">
+                        <button type="button" class="add-btn" onclick="onAdd()">Add</button>
+                    </div>
+                    
+                    <div class="song-upload">
+                        <input type="file" id="file-input" accept=".mp3" style="display: none;" onchange="onFileSelected(event)">
                     </div>
                     <a href="#" onclick="SongList(event)" id="song-list-btn" class="text">🎵歌曲列表</a>
                     <div>
                         <ul id="list" class="list">
+                            <div class="list" id="list"></div>
                             <li><a href="Music/綠色.mp3" class="text" target="_blank">Green(綠色)</a></li>
                             <li><a href="Music/我只想要.mp3" class="text" target="_blank">All I Wanted(我只想要)</a></li>
                             <li><a href="Music/姐姐戀愛吧.mp3" class="text" target="_blank">Sis, Go Fall in Love(姐姐戀愛吧)</a></li>
