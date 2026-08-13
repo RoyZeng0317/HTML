@@ -2,7 +2,7 @@ import sqlite3, os, httpx
 
 def main():
     # Connect to the SQLite database
-        conn = sqlite3.connect('music.db')
+        conn = sqlite3.connect('db.db')
         cursor = conn.cursor()
     
         # Create the songs table if it doesn't exist

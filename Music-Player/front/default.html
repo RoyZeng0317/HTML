@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
+        <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+        <script type="py" src="action.py"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="box from-box">
+                <header>Music Player</header>
+                <a href="#" onclick="Search(event)" id="search-btn" class="text"><i class="fa-solid fa-magnifying-glass"></i>搜尋</a>
+                <div class="song-input" id="song-input">
+                    <input type="text" id="search" class="search" onkeyup="onSearch()" placeholder="Search for song...">
+                    <button type="button" class="add-btn" onclick="onAdd()">Add</button>
+                </div>
+                <div class="song-upload">
+                    <input type="file" id="file-input" accept=".mp3" style="display: none;" onchange="onFileSelected(event)">
+                </div>
+                <a href="#" onclick="SongList(event)" id="song-list-btn" class="text">🎵歌曲列表</a>
+                <div>
+                <ul id="list" class="list">
+                    <div class="list" id="list"></div>
+                </ul>
+            </div>
+        </div>
+    </body>
+</html>
