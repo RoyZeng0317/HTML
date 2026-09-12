@@ -2,9 +2,9 @@ const player = document.getElementById("audio");
 const lyricsList = document.getElementById("lyrics-list");
 let lyricsMap = [];
 
-// 讀取歌詞檔（.txt 檔，存有 [00:00.0] 時間格式）
+// 讀取歌詞（透過後端 API，.txt/.lrc 皆可）
 function loadLyrics(songName) {
-  fetch(`lyrics/${songName}.txt`)
+  fetch(`/api/lyrics/${encodeURIComponent(songName)}`)
     .then(res => {
       if (!res.ok) throw new Error("無法讀取歌詞");
       return res.text();
@@ -58,14 +58,7 @@ player.addEventListener("timeupdate", () => {
 
     const currentLine = document.getElementById(`line-${currentLineIndex}`);
     if (currentLine) {
-      currentLine.scrollIntoView({ top: lineTop, behavior: "smooth" });
+      currentLine.scrollIntoView({ behavior: "smooth", block: "center" });
     }
   }
 });
-
-// 預設播放
-window.onload = () => {
-  const songName = "I Like You"; // 檔名需與 mp3 與 txt 一致
-  player.src = `Music/${songName}.mp3`;
-  loadLyrics(songName);
-};

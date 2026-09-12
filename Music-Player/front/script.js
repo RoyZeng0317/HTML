@@ -26,9 +26,9 @@ const onSearch = () => {
 };
 document.addEventListener("DOMContentLoaded", function(){
     document.addEventListener("keydown", function(event){
+        const searchBox = document.getElementById("search");
         if(event.key === "/"){
             event.preventDefault();
-            const searchBox = document.getElementById("search");
             searchBox.focus();
             searchBox.value = "";
         }
@@ -38,47 +38,67 @@ document.addEventListener("DOMContentLoaded", function(){
             searchBox.blur();
         }
     });
-    function onSearch(){
-        const input = document.getElementById("search").value.toLowerCase();
-        console.log("Searching for:", input);
-    }
-    const searchBox = document.getElementById("search");
-    searchBox.addEventListener("keyup", onSearch);
 });
 // Limit Right Button Menu
 document.addEventListener("contextmenu", function(event) {
     event.preventDefault();
 });
 
-// Music Add to Queue
+// Music Player
 const audio = document.getElementById("audio");
-const queue = document.getElementById("queue");
-const songLinks = document.querySelectorAll("#list a");
 
 let songQueue = [];
 let currentIndex = 0;
 
-// Click the Song Add to Queue and Play
-songLinks.forEach(link => {
-    link.addEventListener("click", function(e) {
-        e.preventDefault();
-            const url = this.href;
-            const name = this.textContent;
-            // add queue
-            songQueue.push({ url, name });
-            updateQueueDisplay()
-            // if audio is paused and queue has only one song, play it
-        if(audio.paused && songQueue.length === 1) {
-            playCurrentSong();
-        }
-    });
-});
+// Load Song List from Backend API
+function loadSongList() {
+    const list = document.getElementById("list");
+    fetch("/api/songs")
+        .then(res => {
+            if (!res.ok) throw new Error("無法取得歌曲清單");
+            return res.json();
+        })
+        .then(data => {
+            list.innerHTML = "";
+            if (!data.songs || data.songs.length === 0) {
+                list.innerHTML = "<li><span class='text'>沒有歌曲，請先用 Add 上傳</span></li>";
+                return;
+            }
+            data.songs.forEach(song => {
+                const li = document.createElement("li");
+                const a = document.createElement("a");
+                a.href = song.url;
+                a.dataset.name = song.title;
+                a.className = "text";
+                a.textContent = song.title;
+                a.addEventListener("click", (e) => onSongClick(e, song));
+                li.appendChild(a);
+                list.appendChild(li);
+            });
+        })
+        .catch(() => {
+            list.innerHTML = "<li><span class='text'>歌曲載入失敗，請確認後端已啟動</span></li>";
+        });
+}
+
+// Click the Song Add to Queue, Play and Load Lyrics
+function onSongClick(event, song) {
+    event.preventDefault();
+    songQueue.push({ url: song.url, name: song.title });
+    updateQueueDisplay();
+    if (audio.paused && songQueue.length === 1) {
+        playCurrentSong();
+    }
+    loadLyrics(song.title);
+}
+
 // Play the Current Song
 function playCurrentSong() {
     if(currentIndex < songQueue.length) {
         const song = songQueue[currentIndex];
         audio.src = song.url;
         audio.play();
+        loadLyrics(song.name);
     }
 }
 audio.addEventListener("ended", () => {
@@ -87,13 +107,13 @@ audio.addEventListener("ended", () => {
         playCurrentSong();
     }
 });
-// show the queue list
-function updateQueueDisplay(){ 
+// Show the Queue List
+function updateQueueDisplay(){
     const queue = document.getElementById("queue");
     let content = "<strong>Queue:</strong><br>";
 
     songQueue.forEach((song, index) => {
-       const line = `<div id=item-${index} style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px;">
+       const line = `<div id="item-${index}" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px;">
        <span>${index === currentIndex ? "▶ " : ""}${song.name}</span>
        <button onclick="removeFromQueue(${index})" style="margin-left: 10px;">Remove</button>
        <button onclick="showLyrics(${index})" style="margin-left: 5px;">Lyrics</button>
@@ -118,14 +138,46 @@ function removeFromQueue(index) {
     }
     updateQueueDisplay();
 }
-// key function
+// Show Lyrics for a Song in Queue
+function showLyrics(index) {
+    const song = songQueue[index];
+    if (song) {
+        loadLyrics(song.name);
+    }
+}
+
+// Upload a Song through Backend API
+function onAdd() {
+    document.getElementById("file-input").click();
+}
+function onFileSelected(event) {
+    const file = event.target.files[0];
+    if (!file) return;
+
+    const form = new FormData();
+    form.append("music", file);
+    form.append("title", file.name.replace(/\.mp3$/i, ""));
+
+    fetch("/api/upload", { method: "POST", body: form })
+        .then(res => {
+            if (!res.ok) throw new Error("上傳失敗");
+            return res.json();
+        })
+        .then(() => {
+            showHint("已上傳");
+            loadSongList();
+        })
+        .catch(() => showHint("上傳失敗"));
+    event.target.value = "";
+}
+
+// Key Shortcut Function
 document.addEventListener("keydown", function(e) {
-    const audio = document.getElementById("audio");
     const speedSelect = document.getElementById("speed");
-    const msgbox = document.getElementById("msgbox");    
+    const msgbox = document.getElementById("msgbox");
 
     if(e.key === "arrowup" || e.key === "arrowdown") {
-        e.preventDefault(); // Prevent scrolling
+        e.preventDefault();
     }
 
     const key = e.key.toLowerCase();
@@ -174,16 +226,8 @@ function showHint(message) {
         hint.style.display = "none";
     }, 1000);
 }
-// Show Lyrics for the Current Song
-songLinks.forEach((link, index) => {
-    link.addEventListener("click", function(e) {
-        e.preventDefault();
 
-        const url = this.getAttribute("href");
-        const name = url.split("/").pop().replace(".mp3", "");
-        
-        player.src = url;
-        player.play();
-        loadLyrics(name);
-    });
+// Initial Load
+document.addEventListener("DOMContentLoaded", () => {
+    loadSongList();
 });
